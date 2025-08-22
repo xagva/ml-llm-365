@@ -1,0 +1,13 @@
+# Enable with: pip install "pre-commit==3.*" && pre-commit install
+# Then run once: pre-commit run --all-files
+repos:
+  - repo: https://github.com/psf/black
+    rev: 24.8.0  # update with `pre-commit autoupdate`
+    hooks:
+      - id: black
+        args: ["--line-length=100"]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.4  # update with `pre-commit autoupdate`
+    hooks:
+      - id: ruff
+        args: ["--fix"]
